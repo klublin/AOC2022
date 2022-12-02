@@ -12,7 +12,7 @@ int one(){
     int currElf = 0;
     while(f){
         std::getline(f,s);
-        if(s=="\r"){
+        if(s==""){
             maxCal = std::max(maxCal, currElf);
             currElf = 0;
         }
@@ -32,7 +32,7 @@ int two(){
 
     while(f){
         std::getline(f,s);
-        if(s=="\r"){
+        if(s==""){
             cal.push_back(currElf);
             currElf = 0;
         }
