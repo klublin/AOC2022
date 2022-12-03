@@ -47,17 +47,17 @@ int two(){
     while(std::getline(f,s)){
         strat = s[2];
         played = s[0] - 'A';
+        temp = 0;
         if(strat == 'Y'){
-            totalPoints+=(played+4);
+            temp = (played+4);
         }
         else if(strat == 'X'){
             temp = ((played-1)+3)%3 + 1;
-            totalPoints+=temp;
         }
         else{
             temp = (played + 1)%3 + 7;
-            totalPoints+=temp;
         }
+        totalPoints+=temp;
     }
     return totalPoints;
 }
