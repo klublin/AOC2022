@@ -10,7 +10,7 @@
 #include <deque>
 #include <sstream>
 
-//we are using a q here b/c now we can simulate a stack with pop(), since the stack will be reversed
+//we are using a deque here b/c now we can simulate a stack with pop_front(), since the stack will be reversed when initially parsing input
 typedef std::vector<std::deque<char>> sVector;
 std::string one(){
     std::string s;
