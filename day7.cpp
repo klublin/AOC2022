@@ -23,9 +23,6 @@ struct Node {
         space = 0;
     }
     ~Node(){
-        if(parent!=nullptr){
-            delete parent;
-        }
         for(auto&i : children){
             delete i.second;
         }
@@ -93,5 +90,5 @@ int main () {
     }
     std::cout<<one(root)<<"\n";
     std::cout<<two(root, needed - (max - root->space))<<"\n";
-
+    delete root;
 }
